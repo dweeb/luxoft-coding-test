@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Validator</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../js/script.js"></script>
+</head>
+<body>
+<p th:text="'Enter trade or risk'" />
+<select id="type">
+    <option id="Forward">Forward</option>
+    <option id="Spot">Spot</option>
+    <option id="VanillaOption">VanillaOption</option>
+    <option id="Risk">Risk</option>
+</select>
+<p/>
+<div id="form">
+    <table>
+        <tr><td>TCN</td><td><input id="TCN" type="text"/></td><td></td></tr>
+        <tr><td>customer</td><td><input id="customer" type="text"/></td><td></td></tr>
+        <tr><td>ccyPair</td><td><input id="ccyPair" type="text"/></td><td></td></tr>
+        <tr><td>direction</td><td><input id="direction" type="text"/></td><td></td></tr>
+        <tr><td>tradeDate</td><td><input id="tradeDate" type="text"/></td><td>YYYY-MM-DD</td></tr>
+        <tr><td>amount1</td><td><input id="amount1" type="text"/></td><td></td></tr>
+        <tr><td>amount2</td><td><input id="amount2" type="text"/></td><td></td></tr>
+        <tr><td>rate</td><td><input id="rate" type="text"/></td><td></td></tr>
+        <tr><td>valueDate</td><td><input id="valueDate" type="text"/></td><td>YYYY-MM-DD</td></tr>
+        <tr><td>legalEntity</td><td><input id="legalEntity" type="text"/></td><td></td></tr>
+        <tr><td>trader</td><td><input id="trader" type="text"/></td><td></td></tr>
+        </table>
+</div>
+<p/>
+<button id="add">Add</button>
+<button id="validate">Validate</button>
+<button id="clear">Clear</button>
+<p/>
+<table id="records" border="1">
+    <tr><td>TCN</td><td>Type</td><td>Error</td></tr>
+</table>
+
+</body>
+</html>
